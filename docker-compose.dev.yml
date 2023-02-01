@@ -1,0 +1,10 @@
+version: "3.7"
+
+services:
+  goleader:
+    build:
+      dockerfile: dockerfile
+    volumes:
+      - ./app:/app
+      - /var/run/docker.sock:/var/run/docker.sock
+    entrypoint: /bin/sh -c "while sleep 1000; do :; done"

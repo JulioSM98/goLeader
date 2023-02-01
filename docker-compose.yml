@@ -1,0 +1,11 @@
+version: "3.7"
+
+services:
+  goleader:
+    image: jsm98/golang_leader:0.1
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    entrypoint: /bin/sh -c "while sleep 5; do ./goleader; done"
+    deploy:
+      mode: replicated
+      replicas: 1
