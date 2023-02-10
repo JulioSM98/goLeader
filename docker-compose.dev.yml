@@ -5,6 +5,6 @@ services:
     build:
       dockerfile: dockerfile
     volumes:
-      - ./app:/app
+      - ./src:/app
       - /var/run/docker.sock:/var/run/docker.sock
     entrypoint: /bin/sh -c "while sleep 1000; do :; done"
